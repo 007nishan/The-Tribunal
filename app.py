@@ -114,6 +114,29 @@ def create_dispute():
 
     return redirect(url_for('dashboard'))
 
+@app.route('/argument/<int:arg_id>/action', methods=['POST'])
+def argument_action(arg_id):
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    
+    arg = Argument.query.get_or_404(arg_id)
+    action = request.form.get('action') 
+    dispute = Dispute.query.get(arg.dispute_id)
+    
+    if action in ['Accepted', 'Rejected', 'Escalated']:
+        arg.status = action
+        
+        # Simple states for dispute
+        if action == 'Accepted':
+            dispute.status = 'Resolved'
+        elif action == 'Escalated':
+            dispute.status = 'Escalated to Higher Authority'
+            
+        db.session.commit()
+        flash(f"Argument has been marked as {action}.")
+        
+    return redirect(url_for('dispute_view', dispute_id=dispute.id))
+
 @app.route('/neural_geode/flag/<int:entry_id>', methods=['POST'])
 def flag_geode(entry_id):
     entry = NeuralGeodeEntry.query.get_or_404(entry_id)

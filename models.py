@@ -30,6 +30,7 @@ class Argument(db.Model):
     quoted_reference = db.Column(db.Text, nullable=True)
     attachment_path = db.Column(db.String(255), nullable=True)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    status = db.Column(db.String(20), nullable=False, default='Pending') # Pending, Accepted, Rejected, Escalated
     
     user = db.relationship('User', backref=db.backref('arguments', lazy=True))
 

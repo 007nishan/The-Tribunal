@@ -22,10 +22,22 @@
                 </div>
                 <div style="margin-bottom: 0.5rem;">{{ arg.logic }}</div>
                 {% if arg.quoted_reference %}
-                <div style="font-size: 0.8rem; background: #fff; padding: 0.5rem; border: 1px dashed var(--border); border-radius: 4px;">
+                <div style="font-size: 0.8rem; background: #fff; padding: 0.5rem; border: 1px dashed var(--border); border-radius: 4px; margin-bottom: 0.5rem;">
                     <strong style="color:var(--text-muted);">Ref:</strong> {{ arg.quoted_reference }}
                 </div>
                 {% endif %}
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 0.5rem; margin-top: 0.5rem;">
+                    <span class="status-badge {% if arg.status == 'Accepted' %}status-closed{% elif arg.status == 'Rejected' %}status-pending{% elif arg.status == 'Escalated' %}status-escalated{% else %}status-pending{% endif %}" style="background: transparent; padding:0; font-weight: 600; color: var(--text-muted);">Status: <span style="{% if arg.status == 'Accepted' %}color: var(--success);{% elif arg.status == 'Rejected' %}color: var(--danger);{% elif arg.status == 'Escalated' %}color: var(--accent);{% endif %}">{{ arg.status }}</span></span>
+                    
+                    {% if arg.status == 'Pending' %}
+                    <form action="{{ url_for('argument_action', arg_id=arg.id) }}" method="POST" style="display: flex; gap: 0.5rem; margin: 0;">
+                        <button type="submit" name="action" value="Accepted" class="btn btn-green" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Accept</button>
+                        <button type="submit" name="action" value="Rejected" class="btn btn-red" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Reject</button>
+                        <button type="submit" name="action" value="Escalated" class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem; border-color: var(--accent); color: var(--accent);">Escalate</button>
+                    </form>
+                    {% endif %}
+                </div>
             </div>
             {% else %}
             <p style="font-size: 0.875rem; color: var(--text-muted);">No arguments have been submitted yet.</p>
