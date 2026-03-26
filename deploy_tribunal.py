@@ -62,7 +62,7 @@ def check_process(name, restart_cmd):
     return True
 
 # 1. Check Flask App -> Start The Tribunal Server
-flask_restart = "cd /home/nishan/the_tribunal && python3 -m venv venv && source venv/bin/activate && pip install flask flask-sqlalchemy && nohup python app.py > app_log.txt 2>&1 &"
+flask_restart = "cd /home/nishan/the_tribunal && python3 -m venv venv && ./venv/bin/pip install flask flask-sqlalchemy && nohup ./venv/bin/python app.py > app_log.txt 2>&1 &"
 app_was_running = check_process("app.py", flask_restart)
 
 # 2. Check Tunnel for Tribunal Server
