@@ -62,7 +62,7 @@ def check_process(name, restart_cmd):
     return True
 
 # 1. Check Flask App -> Start The Tribunal Server
-flask_restart = "cd /home/nishan/the_tribunal && python3 app.py > app_log.txt 2>&1 &"
+flask_restart = "cd /home/nishan/the_tribunal && python3 -m venv venv && source venv/bin/activate && pip install flask flask-sqlalchemy && nohup python app.py > app_log.txt 2>&1 &"
 app_was_running = check_process("app.py", flask_restart)
 
 # 2. Check Tunnel for Tribunal Server
@@ -74,16 +74,15 @@ portfolio_tunnel_restart = "nohup /home/nishan/cloudflared tunnel --url http://1
 portfolio_was_running = check_process("cloudflared tunnel --url http://127.0.0.1:80", portfolio_tunnel_restart)
 
 def get_url(log_path):
+    import re
     print(f"Polling {log_path} for active URL...")
     for _ in range(25):
         try:
             with open(log_path, 'r') as f:
                 log = f.read()
-            if "trycloudflare.com" in log:
-                for line in reversed(log.splitlines()):
-                    if "trycloudflare.com" in line:
-                        idx = line.find("https://")
-                        return line[idx:].split()[0]
+            match = re.search(r'(https://[a-zA-Z0-9-]+\.trycloudflare\.com)', log)
+            if match:
+                return match.group(1)
         except Exception: pass
         time.sleep(3)
     return None
