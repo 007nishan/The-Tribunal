@@ -90,7 +90,7 @@ def dispute_view(dispute_id):
             return redirect(url_for('dispute_view', dispute_id=dispute.id))
             
     # fetch mock geode entries
-    geode_entries = NeuralGeodeEntry.query.order_by(NeuralGeodeEntry.timestamp.desc()).limit(5).all()
+    geode_entries = db.session.query(NeuralGeodeEntry).order_by(NeuralGeodeEntry.timestamp.desc()).limit(5).all()
 
     return render_template('dispute.html', dispute=dispute, arguments=arguments, geode_entries=geode_entries)
 
