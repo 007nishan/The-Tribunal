@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from models import db, User, AuditCase, Dispute, Argument, NeuralGeodeEntry
+from migrations import run_migrations
 import os
 
 app = Flask(__name__)
@@ -27,6 +28,9 @@ def insert_dummy_data():
 
 with app.app_context():
     db.create_all()
+    # Run additive, idempotent migrations on every boot
+    db_path = os.path.join(app.instance_path, 'tribunal.db')
+    run_migrations(db_path)
     insert_dummy_data()
 
 @app.before_request
