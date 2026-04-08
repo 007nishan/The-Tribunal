@@ -1,0 +1,27 @@
+One Pager
+Anonymous Doubt Resolution
+Verified resolution for every doubt.
+A MECHANISM TO ENSURE THAT THE ENTIRE TEAM REMAINS ALIGNED ON ALL ASPECTS OF RDR OPERATIONS. 
+Problem Statement
+We operate in a space which is very dynamic. Things change fast, and our operations impact customer experience directly.
+While we as a team make a bulk real time changes, we have to ensure that our leadership principle - Success and Scale Bring
+Broad Responsibility is well taken care of. One of the challenge which we have to mitigate responsibly is to keep the entire
+team on the same page at all times in a dynamic space. Many a times quality of information passed from the leadership gets
+diluted, or at times looses it’s original form till the time it affects the customer. Vice-versa is also True. To ensure customer
+obsession, every one in the team must be dynamically on the same page at all times, and at the same time, we as a team, we
+can Invent and Simplify as well, we have created a slack based work flow named Query- which also resonates with our
+leadership principle of being Frugal in approach.
+Introduction
+The Query Workflow is a Slack-based system that enables auditors across all RDR pipelines to raise SOP-related, process-
+related, and tool-related doubts & suggestions anonymously. To get started, visit the team's Slack channel rdr-team-all, and
+simply click the Query button placed in the chat panel to raise your query. Every submission is assigned a unique Ticket ID.
+Leadership, then caters to anecdotes, suggestion and doubt. No individual's identity is disclosed at any stage, or, to any party,
+throughout the resolution process. All past resolutions are accessible to the entire team for reference. This way we achieve a
+common understanding of our standard operating procedure which at times get very dynamic. Additionally, upon resolution of
+a query, the auditor receives the answer directly in their Slack DM as well, allowing them to refer back to it at any point they
+may require.
+Step-by-Step Process
+FOR AUDITORS
+Step  1 
+Navigate to the rdr-team-all Slack channel. Click the green Query button at the bottom of the channel. A submission form will
+open within Slack.

@@ -1,0 +1,89 @@
+One Pager
+Anonymous Doubt Resolution
+Verified resolution for every doubt.
+A MECHANISM TO ENSURE THAT THE ENTIRE TEAM REMAINS ALIGNED ON ALL ASPECTS OF RDR OPERATIONS. 
+Problem Statement
+We operate in a space which is very dynamic. Things change fast, and our operations impact customer experience directly.
+While we as a team make a bulk real time changes, we have to ensure that our leadership principle - Success and Scale Bring
+Broad Responsibility is well taken care of. One of the challenge which we have to mitigate responsibly is to keep the entire
+team on the same page at all times in a dynamic space. Many a times quality of information passed from the leadership gets
+diluted, or at times looses it’s original form till the time it affects the customer. Vice-versa is also True. To ensure customer
+obsession, every one in the team must be dynamically on the same page at all times, and at the same time, we as a team, we
+can Invent and Simplify as well, we have created a slack based work flow named Query- which also resonates with our
+leadership principle of being Frugal in approach.
+Introduction
+The Query Workflow is a Slack-based system that enables auditors across all RDR pipelines to raise SOP-related, process-
+related, and tool-related doubts & suggestions anonymously. To get started, visit the team's Slack channel rdr-team-all, and
+simply click the Query button placed in the chat panel to raise your query. Every submission is assigned a unique Ticket ID.
+Leadership, then caters to anecdotes, suggestion and doubt. No individual's identity is disclosed at any stage, or, to any party,
+throughout the resolution process. All past resolutions are accessible to the entire team for reference. This way we achieve a
+common understanding of our standard operating procedure which at times get very dynamic. Additionally, upon resolution of
+a query, the auditor receives the answer directly in their Slack DM as well, allowing them to refer back to it at any point they
+may require.
+Step-by-Step Process
+FOR AUDITORS
+Step  1 
+Navigate to the rdr-team-all Slack channel. Click the green Query button at the bottom of the channel. A submission form will
+open within Slack.
+
+Step  2
+From the dropdown, choose the appropriate use case your query relates to.
+Step  3
+Choose the option that best describes the nature of your query. 
+Select SOP Related for doubts and discussion about our Standard Operating Procedure. 
+Select General Query for doubts and discussion related to Operations processes, tools, etc. 
+Select Ideas/Suggestion for suggesting and discussing any new idea that may be.
+Step  4
+In the Query text field, clearly describe your related doubt or suggestion. Try to be as specific as possible to help the manager
+provide an accurate and useful response.
+Note: Your identity will not be shared with anyone at any level of discussion. 
+Step  5
+Once we click the Submit button, against raised query, a unique Ticket ID will be automatically generated and posted in the
+group.
+Note: Simultaneously, the query with ticket number as it’s identity, will be posted in a leaders group as well from where leaders
+will reply.
+Step 6 
+Once the leadership replies, we will receive the resolution along with original doubt and ticket number - directly in our Slack
+DM. Also, the same will be posted in rdr-team-all channel and Ticket will be marked as resolved. 
+Step 7
+If the resolution does not fully address your doubt, you can click the red Review button present along with the resolution you
+receive in your DM. 
+After you submit your clarification doubt statement, it will be sent for leadership review and individual shall receive the
+clarification in their personal DM once the leadership replies.  
+FOR MANGERS
+Step  1 
+Once an auditor submits a query, it will appear in the managers channel. The Query will appear long with the Ticket ID,
+Pipeline, sub-type, and Doubt. For each query raised, we will have three action buttons namely Answer, Assign and Check
+Status.
+Step  1A 
+If you choose to Answer. Click the Answer button and provide your resolution. 
+Once a resolution statement is submitted, the resolution gets delivered to the auditor as Slack direct message. 
+Also, Confirmation message along with resolution gets posted in rdr-team-all channel. 
+Note: If an auditor clicks the Review button after receiving a resolution, respective answering leadership will receive a DM via
+the bot - notifying that the auditor requires further clarification. Also, the same would be populated in Managers channel.
+Click the Clarify button, provide the additional explanation, and submit. The clarification will be sent directly to the auditor's
+Slack DM along with in the Managers Channel.
+Step  1B
+If we click Assign and select the manager best suited to handle the query. The ticket will be forwarded to that manager's Slack
+DM via the Query bot.
+
+Step  1C
+If we click Check Status,  we will get the current status of the respective TICKET ID stating whether it is in progress or
+answered. 
+Step  2
+If a leadership assigned you a ticket, you will receive the ticket in your Slack DM with the message "A new question has been
+assigned to you, please address" along with already discussed buttons with their respective functionality. We can choose
+according to our requirement.
+Step  3
+If we choose to Re-Assign and then select the next manager, the re-assigned manager will receive the ticket with only an
+Answer button and must resolve it directly.
+
+Important points to note: 
+●
+●
+●
+●
+Auditor identity is never revealed at any point in the workflow — submissions are fully anonymous. 
+This workflow is not for live cases; it is solely for process doubts, SOP questions, and suggestions. 
+In all cases of assignment or re-assignment, the receiving manager holds full responsibility of query resolution.
+Re-assignment is limited to one level. The final recipient must answer directly.
